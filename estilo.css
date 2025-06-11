@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --cor-fundo: #f7f9fc;
+  --cor-texto: #333;
+  --cor-texto-destaque: #1a1a1a;
+  --cor-primaria: #6c63ff;
+  --cor-primaria-clara: #e3e8ef;
+  --cor-branca: #ffffff;
+  --sombra: 0 5px 15px -6px rgba(0, 0, 0, 0.1);
+
+  --fonte-principal: 'Inter', sans-serif;
+
+  --raio-borda: 8px;
+  --espacamento: 16px;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: var(--fonte-principal);
+}
+
+.titulo-principal {
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 46px 0;
+  color: var(--cor-texto-destaque);
+}
+
+.cabecalho {
+  display: flex;
+  background-color: var(--cor-branca);
+  padding: var(--espacamento);
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho__logo {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-left: var(--espacamento);
+  letter-spacing: 2px;
+  color: var(--cor-texto-destaque);
+}
+
+.cabecalho__navegacao ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 18px;
+  gap: var(--espacamento);
+  margin: 0;
+  padding: 0;
+}
+
+.cabecalho__navegacao a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  padding: 14px;
+  border-radius: var(--raio-borda);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cabecalho__navegacao a:hover {
+  background-color: var(--cor-primaria-clara);
+}
+
+.cabecalho__link--ativo {
+  background-color: var(--cor-primaria);
+
+  pointer-events: none;
+}
+
+.planos {
+  display: flex;
+  gap: var(--espacamento);
+  margin-top: 40px;
+}
+
+.plano {
+  flex: 1;
+  background-color: var(--cor-branca);
+  padding: 30px;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+}
+
+.plano__titulo {
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--cor-primaria);
+  margin-top: 0;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+  color: var(--cor-texto-destaque);
+  font-size: 25px;
+}
+
+
+.plano__preco {
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.plano__caracteristicas {
+  margin: 0 0 20px;
+  color: #666;
+  padding-left: var(--espacamento);
+  line-height: 1.8;
+  font-size: 18px;
+  flex: 1;
+}
+
+.plano__caracteristicas li::marker {
+  color: var(--cor-primaria);
+}
+
+.plano__botao {
+  background-color: var(--cor-primaria-clara);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: auto;
+  align-self: center; 
+}
+
+
+/* From Uiverse.io by xueyuantan */ 
+button {
+ width: 9em;
+ height: 3em;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ box-shadow: 6px 6px 9px #c5c5c5,
+             -6px -6px 9px #ffffff;
+}
+
+button::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #8b86eb 0%, #5e59b5 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+button:hover::before {
+ width: 9em;
+}
